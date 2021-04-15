@@ -1,0 +1,140 @@
+.contacts {
+    padding: 120px 0 90px 0;
+    color: #fff;
+    .container {
+        padding-top: 0px;
+    }
+    &__wrapper {
+        display: grid;
+        grid-template-columns: 400px 585px;
+        justify-content: space-between;
+        &-photo{
+            grid-column: 1/2;
+            margin: 0 auto;
+            img {
+                object-fit: contain;
+                height: 100%;
+                width:100%;
+            }
+        }
+        &-description {
+            padding: 10px 10px 0 0;
+            grid-row: 1 /2;
+            grid-column: 2/3;
+            justify-content: center;
+            small{
+                position: relative;
+                z-index: 2;
+                padding-left: 12px;
+                padding-top: 1px;
+                @include before_circle;
+            }
+            h2 {
+                margin-top: 10px;
+            }
+            .divider {
+                margin: 0;
+            }
+            &-social {
+                margin-top: 20px;
+                display: flex;
+                flex-wrap: wrap;
+                &-link {
+                    margin-left: 15px;
+                    height: 40px;
+                    width: 40px;
+                    svg {
+                        height: 100%;
+                        width: 100%;
+                        path {
+                            fill: #fff;
+                        }
+                        &:hover {
+                            path {
+                                fill: $main_color;
+                            }
+                        }
+                    }
+                }
+            }
+            &-form {
+                color: #000;
+                margin-top: 30px;
+                display: grid;
+                grid-template: 45px 190px 45px / repeat(2, 280px);
+                justify-content: space-between;
+                row-gap: 27px;
+                label {
+                    display: block;
+                    position: absolute;
+                    height: 18px;
+                    padding: 0 8px;
+                    background-color: #fff;
+                    font-size: 12px;
+                    margin-bottom: 0;
+                    top: -9px;
+                    left: 12px;
+                }
+                &-input {
+                    position: relative;
+                    input {
+                        width: 100%;
+                        height: 100%;
+                        padding: 0 20px;
+                        font-size: 12px;
+                        &:focus {
+                            outline: 3px solid $main_color;
+                        }
+                    }
+                }
+                &-triggers {
+                    grid-column: 1/3;
+                    display: grid;
+                    grid-template-columns: repeat(2, auto);
+                    column-gap: 35px;
+                    justify-content: space-between;
+                    align-items: center;
+                }
+                &-policy{
+                    color: #fff;
+                    font-size: 14px;
+                    line-height: 18px;
+                    input {
+                        margin-right: 10px;
+                    }
+                }
+                
+                &-textarea {
+                    position: relative;
+                    grid-column: 1/3;
+                    textarea {
+                        padding: 20px;
+                        font-size: 12px;
+                        width: 100%;
+                        height: 100%;
+                        resize: none;
+                        &:focus {
+                            outline: 3px solid $main_color;
+                        }
+                    }
+                }
+            }
+        }
+    
+    }
+    &__text {
+        margin-top: 20px;
+    }
+    
+    
+    
+    &__btn {
+        border: none;
+        border-radius:5px;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 21px;
+        background-color: $main_color;
+        color: #fff;
+    }
+}

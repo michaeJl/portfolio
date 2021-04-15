@@ -1,0 +1,15 @@
+.svg {
+    height: 300px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    svg {
+        stroke: $main_color;
+        stroke-width: 15px;
+        stroke-dasharray: 500px;
+        stroke-dashoffset: 500px;
+        fill: none;
+    }
+}

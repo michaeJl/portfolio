@@ -1,0 +1,43 @@
+.skills {
+    color: #fff;
+    padding-top: 125px;
+    
+    &__grid {
+        margin-top: 60px;
+        padding-bottom: 15px;
+        display: grid;
+        grid-template: repeat(1, minmax(270px, auto)) /  repeat(auto-fit, minmax(270px,auto));
+        grid-auto-rows: minmax(270px, auto);
+        gap: 15px;
+        grid-auto-flow: row;
+        &-instument {
+            position: relative;
+            text-align: justify;
+            padding: 25px;
+            border: 1px solid #fff;
+            background-color: rgba(255, 255, 255, 0.2);
+            color: #000;
+            overflow: hidden;
+            img {
+                display: block;
+            }
+            &-main {
+                &-subtitle {
+                    margin: 24px 0 15px 0;
+                }
+                z-index: 1;
+                position: relative;
+                transform: translateX(115%);
+            }
+            &-cover {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-color: $main_color;
+                transform:  translateX(115%);
+            }
+        }
+    }
+}

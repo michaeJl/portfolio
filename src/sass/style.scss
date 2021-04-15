@@ -1,0 +1,105 @@
+@import 'libs/bootstrap-reboot.min';
+@import 'base/fonts';
+@import 'base/variables';
+@import 'base/mixins';
+
+* {
+    font-family: 'M PLUS Rounded 1c' , sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    padding-top: 20px;
+    width: 1140px;
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0.72);
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+body {
+    background: url('../img/portfolio-background.jpg') center (center/cover) no-repeat fixed;
+}
+
+::selection {
+    color: $main_color;
+}
+
+::-webkit-scrollbar-button {
+    width:6px;
+    height:0px
+}
+
+::-webkit-scrollbar-track {
+    background-color:#32312e;
+    box-shadow:0px 0px 3px #000 inset;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color:$main_color;
+}
+
+::-webkit-resizer{
+    width:7px;
+    height:0px
+}
+
+::-webkit-scrollbar{
+    width: 11px;
+}
+
+.divider {
+    width: 60px;
+    height: 3px;
+    border: none;
+    color: $main_color;
+    background-color: $main_color;
+    margin: 25px auto 0 auto;
+}
+
+
+
+.rotate {
+    height: 100vh;
+    svg {
+        g {
+            circle {
+                transform-origin: 150px 150px;
+                transform: rotate(0);
+                animation: degrise 2s infinite alternate;
+            }
+
+        }
+    }
+}
+
+@for $i from 2 through 7 {
+    .rotate {
+        svg {
+            g circle:nth-child(#{$i}) {
+
+                animation-delay: #{$i/4}s   
+    
+            }
+        }
+    }
+}
+
+@keyframes degrise {
+    100% {
+        transform: rotate(360deg);
+      }
+}
+@import 'blocks/animate';
+@import 'blocks/title';
+@import 'blocks/menu';
+@import 'blocks/promo';
+@import 'blocks/about';
+@import 'blocks/resume';
+@import 'blocks/skills';
+@import 'blocks/myworks';
+@import 'blocks/contacts';
+
+@import 'blocks/media';

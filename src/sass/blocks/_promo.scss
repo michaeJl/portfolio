@@ -1,0 +1,55 @@
+.promo {
+    .container {
+        background-color: rgba(0, 0, 0, 0);
+        padding-top: 0px;
+    }
+    position: relative;
+    display: block;
+    height: 100vh;
+    padding-top: 150px;
+    &__wrapper {
+        &-title {
+            color: #fff;
+            text-align: center;
+        }
+        &-subtitle {
+            color: #fff;
+            text-align: center;
+        }
+    }
+    &__social {
+        margin: 20% auto 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 300px;
+        &-title {
+            color: #fff;
+            font-size: 20px;
+            font-weight: 500;
+        }
+        &-wrapper {
+            display: flex;
+            margin-top: 25px;
+            justify-content: space-around;
+            width: 100%;
+            flex-wrap: wrap;
+            &-link {
+                height: 40px;
+                width: 40px;
+                svg {
+                    height: 100%;
+                    width: 100%;
+                    path {
+                        fill: #fff;
+                    }
+                    &:hover {
+                        path {
+                            fill: $main_color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
